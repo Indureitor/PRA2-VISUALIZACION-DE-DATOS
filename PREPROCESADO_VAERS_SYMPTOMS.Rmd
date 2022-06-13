@@ -1,0 +1,52 @@
+---
+title: "Untitled"
+author: "DAVID DE VEGA MARTIN"
+date: "6/6/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+0.- Cargamos librerias.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+1.- Cargamos los archivos.
+
+```{r}
+vaers_vax2021 <- read.csv('2021VAERSVAX.csv')
+vaers_vax2022 <- read.csv('2022VAERSVAX.csv')
+```
+
+2.- Comprobamos estructura de los datos.
+
+```{r}
+head(vaers_vax2021,5)
+```
+3.- Eliminamos columnas de texto customizado con informacion de cada paciente.
+
+
+
+4.-  Concatenamos los archivos.
+```{r}
+vaers_vax <- rbind(vaers_vax2021 ,vaers_vax2022 )
+```
+
+```{r}
+vaers_vax 
+```
+
+
+
+
+7.- Archivo procesado, final a csv.
+```{r}
+write.csv (vaers_vax ,"C:\\pruebas\\vaers_vax_01.csv")
+```
+
+

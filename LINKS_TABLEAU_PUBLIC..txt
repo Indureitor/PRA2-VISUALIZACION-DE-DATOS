@@ -1,0 +1,21 @@
+
+# DAVID DE VEGA MARTIN
+
+# PRACTICA 2-VISUALIZACION DE DATOS.
+# ===================================================================================
+
+
+# LINKS TABLEAU PUBLIC PARA LOS DASHBOARDS
+
+################################################################################
+
+#  Dashboard Fallecidos
+https://public.tableau.com/authoring/Practica2_16551365501170/DASHFALLECIDOS#1
+
+# Dashboard Vacunados
+https://public.tableau.com/authoring/Practica2_16551365501170/DASHVACUNADOS#1
+
+# Dashboard Fabricantes
+https://public.tableau.com/authoring/Practica2_16551365501170/FABRICANTES#1
+
+################################################################################

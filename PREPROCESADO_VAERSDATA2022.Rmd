@@ -1,0 +1,78 @@
+---
+title: "Untitled"
+author: "DAVID DE VEGA MARTIN"
+date: "7/6/2022"
+output: html_document
+---
+
+# Cargamos los paquetes R que vamos a usar
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+
+
+#Carga de los datos:
+```{r}
+VaersData <- read.csv("2022VAERSDATA.csv",header=TRUE)
+```
+
+#No es necesario cambiar ningun nombre de atributo.
+
+
+# Verificamos la estructura del conjunto de datos
+```{r}
+str(VaersData)
+filas=dim(VaersData)[1]
+```
+
+
+#Estadísticas básicas
+```{r}
+summary(VaersData)
+class(VaersData)
+```
+
+# Estadísticas de valores vacíos --> NO HAY VALORES VACIOS
+```{r}
+colSums(is.na(VaersData))
+colSums(VaersData=="")
+```
+
+
+```{r}
+head(VaersData,3)
+```
+```{r}
+str(VaersData$RECVDATE)
+```
+
+```{r}
+VaersData$RECVDATE <- as.Date(VaersData$RECVDATE, format ="%m/%d/%Y")
+```
+```{r}
+tail(VaersData$RECVDATE)
+```
+
+```{r}
+VaersData$RECVDATE <- as.Date(VaersData$RECVDATE, format ="%d/%m/%Y")
+```
+
+```{r}
+VaersData$new_RECVDATE <- strptime(as.character(VaersData$RECVDATE),"%Y-%m-%d")
+```
+```{r}
+VaersData$RECVDATE <- format(VaersData$new_RECVDATE, "%d-%m-%Y")
+```
+
+
+```{r}
+
+tail(VaersData,3)
+
+```
+```{r}
+write.csv(VaersData,"C:\\pruebas\\vaersdata.csv")
+```
+
